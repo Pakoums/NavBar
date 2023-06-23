@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cantarell&display=swap');
+        :root{
+            --font-family: Noto Sans;
+            --primary-color: #f75095;
+            --text-color: #636363;
+            --body-color: #F9F9F9;
+            --white-color: #FFF;
+            --text-color-dark: #242738;
+            --nav-height: 70px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            text-size-adjust: none;
+        }
+        html,
+        body {
+            font-family: var(--font-family),Cantarell,sans-serif;
+            line-height: 1.5;
+            color: var(--text-color);
+            background-color: var(--body-color);
+            overflow-x: hidden;
+            font-size: 16px;
+            height: 100%;
+            min-width: 320px;
+        }
+        header{
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 15px rgba(0,0,0,.1);
+            background-color: var(--white-color);
+            background-size: cover;
+            background-position: 50%;
+            background-repeat: no-repeat;
+            position: relative;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+        .container{
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+            max-width: 1600px;
+            align-items: center;
+        }
+        nav{
+            display: flex;
+            position: relative;
+            height: var(--nav-height);
+            z-index: 1000;
+            justify-content: space-between;
+        }
+        #navigation{
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+        ul{
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        ul li{
+            padding-left: 20px;
+            position: relative;
+        }
+        #navigation li{
+            padding: 0;
+            transition: transform .1s linear;
+        }
+        #navigation a, #navigation span {
+            padding: 10px 12px;
+            display: inline-block;
+            height: 43px;
+            border: 1px solid transparent;
+            color: var(--text-color-dark);
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.3s all;
+        }
+        #navigation a:hover{
+            color: var(--primary-color);
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--primary-color);
+            transition: 0.3s all;
+            margin-right: 4px;
+        }
+        img{
+            max-width: 100px;
+        }
+    </style>
+    <header>
+        <nav class="container">
+            <a href="https://www.youtube.fr">
+                <img src="https://cdn.pixabay.com/photo/2017/03/16/21/18/logo-2150297_640.png" alt="Logo" style="width: 350px;">
+            </a>
+            <ul id="navigation">
+                <li>
+                    <a href="">Accueil</a>
+                </li>
+                <li>
+                    <a href="">Nos produits</a>
+                </li>
+                <li>
+                    <a href="">A propos de nous</a>
+                </li>
+                <li>
+                    <a href="">Nous contacter</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
